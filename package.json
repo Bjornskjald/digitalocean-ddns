@@ -1,0 +1,27 @@
+{
+  "name": "digitalocean-ddns",
+  "version": "1.0.0",
+  "description": "DynDNS updater for DigitalOcean",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bjornskjald/digitalocean-ddns.git"
+  },
+  "author": "Bjornskjald <github@bjorn.ml> (https://bjorn.ml/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bjornskjald/digitalocean-ddns/issues"
+  },
+  "homepage": "https://github.com/Bjornskjald/digitalocean-ddns#readme",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "do-wrapper": "^3.15.1",
+    "dotenv": "^6.1.0",
+    "public-ip": "^2.4.0"
+  }
+}
