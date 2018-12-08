@@ -5,7 +5,7 @@ const DigitalOcean = require('do-wrapper').default
 const api = new DigitalOcean(API_KEY, 100)
 
 const getDate = _ => new Date().toJSON().replace('T', ' ').replace(/\..*/, '')
-const log = m => console.log(m + getDate())
+const log = m => console.log(`[${getDate()}] ${m}`)
 
 async function update () {
   log('Updating...')
