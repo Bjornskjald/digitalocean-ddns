@@ -12,7 +12,7 @@ const getDate = _ => {
 }
 
 const log = m => console.log(`[${getDate()}] ${m}`)
-const inspect = o => util.inspect(o, { colors: true, breakLength: (process.stdout.columns - 20) })
+const inspect = o => util.inspect(o, { colors: true, breakLength: (process.stdout.columns - 22) }).split('\n').map(log)
 
 async function update () {
   log('Updating...')
