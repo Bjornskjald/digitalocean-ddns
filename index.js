@@ -35,4 +35,4 @@ async function update () {
   log('Updated successfully!')
 }
 update()
-setInterval(update, 10 * 60 * 1000)
+setInterval(update, 5 * 60 * 1000)
