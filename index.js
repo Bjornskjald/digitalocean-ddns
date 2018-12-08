@@ -28,6 +28,8 @@ async function update () {
   log(`Target record:`)
   inspect(record)
 
+  if (record.data === ip) return log(`Not changed, ignoring.`)
+
   log(`Updating...`)
   await api.domainRecordsUpdate(DOMAIN_NAME, record.id, { data: ip })
   log('Updated successfully!')
