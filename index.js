@@ -4,7 +4,12 @@ const publicIp = require('public-ip')
 const DigitalOcean = require('do-wrapper').default
 const api = new DigitalOcean(API_KEY, 100)
 
-const getDate = _ => new Date().toJSON().replace('T', ' ').replace(/\..*/, '')
+const getDate = _ => {
+  let date = new Date()
+  date.setMinutes(date.getMinutes() + -(new Date()).getTimezoneOffset())
+  return date.toJSON().replace('T', ' ').replace(/\..*/, '')
+}
+
 const log = m => console.log(`[${getDate()}] ${m}`)
 
 async function update () {
