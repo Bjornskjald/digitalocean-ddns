@@ -34,5 +34,6 @@ async function update () {
   await api.domainRecordsUpdate(DOMAIN_NAME, record.id, { data: ip })
   log('Updated successfully!')
 }
-update()
-setInterval(update, 5 * 60 * 1000)
+const updateWithCatch = () => update().catch(err => console.error(err))
+updateWithCatch()
+setInterval(updateWithCatch, 5 * 60 * 1000)
